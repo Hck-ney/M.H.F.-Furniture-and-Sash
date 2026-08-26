@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --radius-sm: 0.15rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.4rem;
+}
+
+:root {
+  color-scheme: light;
+  --background: oklch(0.95 0.018 85);
+  --foreground: oklch(0.2 0.025 70);
+  --card: oklch(0.92 0.026 82);
+  --card-foreground: oklch(0.2 0.025 70);
+  --popover: oklch(0.97 0.012 85);
+  --popover-foreground: oklch(0.2 0.025 70);
+  --primary: oklch(0.27 0.035 68);
+  --primary-foreground: oklch(0.95 0.018 85);
+  --secondary: oklch(0.81 0.04 105);
+  --secondary-foreground: oklch(0.2 0.025 70);
+  --muted: oklch(0.88 0.025 82);
+  --muted-foreground: oklch(0.48 0.028 68);
+  --accent: oklch(0.67 0.12 35);
+  --accent-foreground: oklch(0.2 0.025 70);
+  --border: oklch(0.2 0.025 70 / 16%);
+  --input: oklch(0.2 0.025 70 / 20%);
+  --ring: oklch(0.67 0.12 35);
+}
+
+* { @apply border-border outline-ring/50; }
+html { scroll-behavior: smooth; background: var(--background); }
+body { @apply bg-background text-foreground font-sans; }
+::selection { background: var(--accent); color: var(--foreground); }
+button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
